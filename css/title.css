@@ -1,0 +1,30 @@
+#title{
+    font-family: noto sans kr;
+}
+#title .inner{
+
+    width: 68%;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+#title .inner h2.h2{
+    position: relative;
+}
+
+#title .inner h2{
+font-size: 45px;
+font-weight: 700;
+}
+#title .inner h2.h2::before{
+    content:"";
+    background-image: url(../img/title/ico_date4.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    position: relative;
+    bottom: -17px;
+    margin-right: 10px;
+}

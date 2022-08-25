@@ -1,0 +1,14 @@
+html,body{
+  height: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: 100%; /*기본 크기로 16px 설정*/
+}
+a{
+  color: #000;
+  text-decoration: none;  
+}
+ul{
+  list-style: none;
+  padding: 0;
+}

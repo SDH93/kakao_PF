@@ -1,0 +1,271 @@
+
+
+footer {
+    position: relative;
+  padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  footer .inner {
+    
+  }
+footer .inner::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #ebebeb;
+  left: 0;
+  top: 0;
+  
+}
+  footer .inner .top {
+    
+  width: 100%;
+  }
+  footer .inner .top ul.main {    
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  }
+  footer .inner .top ul.main>li {    
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 16.6666%;
+  }
+  footer .inner .top ul.main > li::after{
+  
+  }
+  footer .inner .top ul.main li div{    
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+  footer .inner .top ul.main li:nth-of-type(6){
+    
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  }
+
+  footer .inner .top ul.main li h2 {
+  position: relative;
+  font-size: 13px;
+  overflow: initial;
+  width: fit-content;
+  }
+footer .inner .top ul.main li h2::before{
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #ffcd00;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 3px);
+  left: -15px;
+  opacity: 0;
+}
+footer .inner .top ul.main li h2:hover::before{
+  opacity: 1;
+}
+  footer .inner .top ul.main li h2 a {
+    
+  }
+footer .inner .top ul.main li h2 a span{
+    font-size: 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    background-position: center;   
+    position: absolute;
+    background-image: url(../img/arrow_r3.svg);
+    transform: rotate(315deg);
+}
+  footer .inner .top ul.main li ul.sub {
+    
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+  footer .inner .top ul.main li ul.sub li {
+    
+  }
+  footer .inner .top ul.main li ul.sub li a {
+    
+  color: #888888;
+  font-weight: 500;
+  }
+footer .inner .top ul.main li ul.sub li a:hover{
+  color: #111;
+}
+  footer .inner .top ul.main li ul.sub li a span{
+    font-size: 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    background-position: center;   
+    position: absolute;
+    background-image: url(../img/arrow_r2.svg);
+    transform: rotate(315deg);
+  }
+  footer .inner div.bottom {
+    
+  margin-top: 100px;
+  position: relative;
+  }
+  footer .inner div.bottom ul.bottom {
+    
+  display: flex;
+  font-size: 12px;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 72.167vw;
+  }
+  footer .inner div.bottom ul.bottom li {
+    
+  position: relative;
+  }
+  fofooter .inner div.bottom ul.bottom li{
+
+  }
+  footer .inner div.bottom ul.bottom li a {
+    
+  color: #888888;
+  }
+footer .inner div.bottom ul.bottom li a:hover {
+    color: #333333;  
+}
+footer .inner div.bottom ul.bottom li a svg{
+  transform: rotate(180deg);
+  color: #888888;
+}
+footer .inner div.bottom ul.bottom li a:hover svg{
+  transform: rotate(0deg);
+    color: #333333;
+}
+
+
+footer .inner div.bottom ul.bottom > li:nth-of-type(n+2):nth-of-type(-n+3) > a{
+    
+  font-weight: 700;
+  color: #333333;
+  }
+
+
+
+  footer .inner div.bottom > span {
+    
+  color: #888888;
+  font-size: 13px;
+  margin-top: 30px;
+  display: block;
+  }
+  footer .inner div.bottom span a {
+    
+  color: #888888;
+  }
+  footer .inner div.bottom a.site {
+    
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 160px;
+  background-color: #eeeeee;
+  padding: 13px 10px;
+  border-radius: 25px;
+  font-size: 13px;
+  padding-left: 25px;
+  }
+footer .inner div.bottom a.site::before{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 14px;
+  background-color: #838383;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 1px);
+}
+footer .inner div.bottom a.site::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 14px;
+  background-color: #838383;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 1px);
+  transform: rotate(90deg);
+}
+
+/* i 태그 css */
+
+footer i{
+  display: inline-block;
+  color: #888888;
+  width: 14px;
+  height: 14px;
+  float: right;
+  margin-right: 15px;
+  text-align: center;
+}
+.rotate{
+  transform: rotate(180deg);
+}
+footer a.A i{
+  
+  font-size: 23px;
+  width: 20px;
+  height: 52px;
+  line-height: 52px;
+  transform: translateX(4px) rotate(45deg);
+}
+
+/* footer gray */
+
+ul.bottom li ul.gray {
+  
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px 15px;
+  position: absolute;
+  border-radius: 15px;
+  background-color: #eee;
+  width: 250%;
+  box-sizing: border-box;
+  top: -102px;
+  max-width: fit-content;
+  /*! min-width: fit-content; */
+  white-space: nowrap;
+}
+ul.bottom li:not(:nth-of-type(2)):not(:nth-of-type(5)) ul.gray{
+  top: -135px;
+}
+
+footer ul.gray span.link{
+
+  position: relative;
+  right: -3px;
+  top: 0px;
+}
+footer ul.gray li {
+  
+  display: flex;
+  justify-content: space-between;
+}
+footer ul.gray li a {
+  
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  width: 100%;
+  color: #888;
+  letter-spacing: -1px;
+}
