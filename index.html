@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오 - PF</title>
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,7 +96,7 @@
                 winW=$(window).width();
                 $("#board").css("width",winW);
                 if(winW<1051){
-                    console.log(winW);
+                    //console.log(winW);
                     $("footer .inner .top ul.main li h2 i").remove();
                     $("footer .inner .top ul.main li h2 a").off("click");
                     $("footer .inner .top ul.main li h2 a").parent().parent("li").removeClass("border_B");
