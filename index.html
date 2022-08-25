@@ -188,6 +188,7 @@
                         $("#board").css("position","fixed");
                         $("#board").toggleClass("slideR")
                         $("#title,main,footer").show();
+                        $("ul.menu li a").off("click");
 
                         setTimeout(function(){
                             $("header#top").prependTo("body");
