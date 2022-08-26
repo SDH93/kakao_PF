@@ -3,13 +3,25 @@ header#top {
   width: 100%;
   display: flex;
   justify-content: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  z-index: 2;
+  background-color: #FFF;
+  transition: top 300ms;
   }
+
+
+.header_white{
+  
+  border-bottom: 1px solid #eeeeee;
+}
+
   header#top .inner {    
   display: flex;
   width: 68%;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  margin: 20px auto;
   }
 
   header#top .inner h1.logo a.logo{
@@ -37,19 +49,43 @@ header#top {
   header#top .inner ul.menu li {
     
   }
-  header#top .inner ul.menu li a {
+  header#top .inner ul.menu>li>a {
     display: block;
-    line-height: 2;
-    
-    
+    line-height: 2;    
     text-align: center;
     padding: 0px 20px;
   }
-header#top .inner ul.menu:hover li a{
+header#top .inner ul.menu:hover > li > a{
   color: #909090;
 }
-header#top .inner ul.menu li a:hover{
+header#top .inner ul.menu li:hover a{
   color: #000;
+}
+
+header#top .inner ul.menu li .menu_sub{
+  display: flex;
+  position: absolute;
+  padding: 5px 20px;
+  background-color: #000000;
+  border-radius: 30px;
+  margin-top: 10px;
+  
+
+}
+header#top .inner ul.menu li .menu_sub li{
+  
+}
+header#top .inner ul.menu li .menu_sub li a{
+  color: white;
+  font-size: 18px;
+  display: block;    
+  text-align: center;
+  padding: 10px 10px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+header#top .inner ul.menu li .menu_sub li:hover a{
+  font-weight: 500;
 }
   header#top .inner ul.enb {
     column-gap: 15px;    
@@ -103,6 +139,5 @@ body>header#top .inner ul.enb li:hover{
     background-image: url(../img/logo.svg);
     background-size: contain;
     background-repeat: no-repeat;
-
-
   }
+

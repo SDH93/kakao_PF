@@ -249,7 +249,7 @@ footer .inner .top ul.main li ul.sub li a:hover{
 
 @media screen and (max-width:730px){
   .inner{
-    min-width: 330px;
+    min-width: 300px;
     
   }
   p.hash{
@@ -260,7 +260,7 @@ footer .inner .top ul.main li ul.sub li a:hover{
   }
   #title .inner{
     
-  min-width: 330px;
+  min-width: 300px;
   }
   #title .inner h2{
     font-size: 25px;
@@ -273,7 +273,7 @@ footer .inner .top ul.main li ul.sub li a:hover{
   bottom: -5px;
   }
   article{
-    min-width: 330px !important;
+    min-width: 300px !important;
     max-width: 100% !important;
     width: 100%;
   }
@@ -303,7 +303,7 @@ footer .inner .top ul.main li ul.sub li a:hover{
     justify-content: center;
    
     width: 100%;
-    min-width: 330px;
+    min-width: 300px;
   }
   main section#article1 .side1{
     justify-content: center;
@@ -314,14 +314,14 @@ footer .inner .top ul.main li ul.sub li a:hover{
   }
   #picture .world{    
   max-height: 600px;
-  min-width: 330px !important;
+  min-width: 300px !important;
   max-width: 100% !important;
   width: 100%;
   }
   #picture .world p.culture{
     
   height: 500px;
-  font-size: 33px;
+  font-size: 30px;
   }
   
   section#article2 .inner .side1{
@@ -411,4 +411,10 @@ footer .inner .top ul.main li ul.sub li a:hover{
   }
   footer ul.gray span.link
 
+}
+
+@media screen and (max-width:400px){
+  footer .inner div.bottom ul.bottom li a{
+    font-size: 10px;
+  }
 }

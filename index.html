@@ -102,6 +102,7 @@
                     $("footer .inner .top ul.main li h2 a").parent().parent("li").removeClass("border_B");
                     $("footer .inner .top ul.main li h2 a").parent().parent("div").removeClass("border_B");
                     $("header#top .inner ul.enb li.ham").hide();
+                    $("#top ul.menu li ul.menu_sub").hide()
 
                     $("footer .inner .top ul.main li ul.sub").hide();
                     $("footer .inner .top ul.main li h2 a span").hide();
@@ -128,7 +129,51 @@
                     $("header#top .inner ul.enb li.dark").hide();
                     $("#board .boardinner #top .inner ul li.ham").hide();                    
 
+                }       
+
+                else if ($("#board .boardinner #top .inner ul li").hasClass("X")) {
+                    
+                    $("#board").css("position","fixed");
+                    $("#board").toggleClass("slideR")
+                    $("#title,main,footer").show();
+                    $("#board .boardinner ul.menu > li > a").off("click");
+                    $("#board .boardinner ul.menu > li:not(:nth-of-type(2)) i").hide();
+
+                    
+                    $("header#top").prependTo("body");
+                    $("li.X a").parent().removeClass("X").addClass("ham");
+                    $("li.search").show();
+
+                    if(winW>1051){
+
+                    $("header#top .inner ul.enb li.ham").hide();
+                    $("header#top .inner ul.enb li.lang").show();       
+                    $("header#top .inner ul.enb li.dark").show();
+
+                    $("footer .inner .top ul.main li ul.sub").show();
+                    $("footer .inner .top ul.main li h2 a span").show();
+                    $("footer .inner .top ul.main li h2 a i").remove();
+                    $("footer .inner .top ul.main li h2 a").off("click");
+                    $("header#top .inner ul.enb li.ham").hide();
+                    $("body>header#top .inner ul.enb li.lang").show();       
+                    $("body>header#top .inner ul.enb li.dark").show();
+
+                    }                        
+                                            
+                    $("#board").remove();
+                    $("ul.menu li>a>i").remove();
+
+                    $("#top ul.menu li a").click(function(){                
+                        $(this).siblings("ul.menu_sub").toggle();
+                        $("ul.menu li a").not(this).siblings("ul.menu_sub").hide();
+                        return false;
+                    })     
+                    
+                    
+                    
+                    n=0;                    
                 }
+
                 else{
 
                     $("footer .inner .top ul.main li ul.sub").show();
@@ -137,7 +182,7 @@
                     $("footer .inner .top ul.main li h2 a").off("click");
                     $("header#top .inner ul.enb li.ham").hide();
                     $("body>header#top .inner ul.enb li.lang").show();       
-                    $("body>header#top .inner ul.enb li.dark").show();                    
+                    $("body>header#top .inner ul.enb li.dark").show();               
 
                 }                
             });
@@ -166,7 +211,7 @@
                     $("#board .boardinner ul.menu>li:not(:nth-of-type(2))>a").append("<i class='ion-arrow-down-b'></i>");
 
                     
-                    $("ul.menu li a").click(function(){
+                    $("#board ul.menu li a").click(function(){
                         $("#board").css("position","initial");
                         $(this).siblings("ul.menu_sub").toggle();
                         $(this).children("i").toggleClass("ion-arrow-down-b");                        
@@ -185,10 +230,12 @@
 
                 else{
                     if($(this).parent().hasClass("X")){
+
                         $("#board").css("position","fixed");
                         $("#board").toggleClass("slideR")
                         $("#title,main,footer").show();
-                        $("ul.menu li a").off("click");
+                        $("#board .boardinner ul.menu > li > a").off("click");
+                        $("#board .boardinner ul.menu > li:not(:nth-of-type(2)) i").hide();
 
                         setTimeout(function(){
                             $("header#top").prependTo("body");
@@ -205,6 +252,12 @@
                         setTimeout(function(){                            
                             $("#board").remove();
                             $("ul.menu li>a>i").remove();
+
+                            $("#top ul.menu li a").click(function(){                
+                                $(this).siblings("ul.menu_sub").toggle();
+                                $("ul.menu li a").not(this).siblings("ul.menu_sub").hide();
+                                return false;
+                            })
                         },500);                   
                     
                         n=0;
@@ -244,26 +297,83 @@
             $("p.timenow").text(year+"."+month+"."+date+" "+hr+":"+min+""+ampm);
             $("h2.date").text(month+"월 "+date+"일 "+dayKR+"요일 소식입니다");
 
+
+            //top menu click
+            $("#top ul.menu li a").click(function(){                
+                $(this).siblings("ul.menu_sub").toggle();
+                $("ul.menu li a").not(this).siblings("ul.menu_sub").hide();
+                return false;
+            })
             
+            //scroll
+            
+            $(window).on('mousewheel DOMMouseScroll scroll', function(event){
+                // 휠 방향 감지(아래: -120, 위: 120)
+                let w_delta = event.originalEvent.wheelDelta/30 ; //크롬용
+                //alert(w_delta);
+                let w_deltaF = -event.originalEvent.detail*1.5 ; //파이어폭스용
+                //alert(w_deltaF);
+
+                if($(window).scrollTop()<30){
+                    $("body>header").css("position","initial");
+                    $("body>header").removeClass("header_white");
+                }
+                if($(window).scrollTop()>30 && $(window).scrollTop()<300){
+                    $("body>header").css("position","fixed");
+                    $("body>header").addClass("header_white");
+                }
+                if($(window).scrollTop()>300){
+                    if(w_deltaF<0){//아래로
+                        $("body>header").css("top","-20%");
+                    }
+                    if(w_delta<0){//아래로
+                        $("body>header").css("top","-20%");
+                    }  
+
+                }         
+                if(w_deltaF>0){ //위로
+                    if($(window).scrollTop()>30){
+                        $("body>header").css("top","0%");
+                        $("body>header").addClass("header_white");
+                    }                    
+                }
+                if(w_delta>0){ //위로
+                    if($(window).scrollTop()>30){
+                        $("body>header").css("top","0%");
+                        $("body>header").addClass("header_white");
+                    }                    
+                }
+            });       
+             
             
             //dot click
-            /*
+            $("div.dots").clone().appendTo("article").hide();
+            
             $("a.dots").click(function(){
-                
-                $("div.dots").clone().appendTo($(this).parent()).show(); 
+                $("a.dots").not(this).parent().children("div.dots").children("ul.dots").slideUp();
+                $(this).siblings("div.dots").fadeToggle(300);
+
+                setTimeout(() => {
+                    $(this).siblings("div.dots").children("ul.dots").slideDown(300); 
+                }, 100);                
                 $(this).hide();
                 $("a.dots").not(this).show();        
-                $("a.dots").not(this).parent().children("div.dots").remove();      
-                return false;
+                $("a.dots").not(this).parent().children("div.dots").fadeOut(500);      
+                return false;                
 
             });
 
-            $("a.close").click(function(){
-                $("div.dots").remove();
-                $(this).parent().parent().parent().siblings("a.dots").show();                
+            $("li.dots_close a").click(function(){
+                setTimeout(() => {
+                    $(this).parent().parent().parent("div.dots").fadeOut(200);
+                }, 200);  
+                $("ul.dots").slideUp(300); 
+                $("a.dots").show();                
                 return false;                
             });
-            */
+
+            
+            
             
 
         });
@@ -279,7 +389,7 @@
             </h1>
             <ul class="menu flex flexCenter">
                 <li>
-                    <a href="">카카오</a>
+                    <a href="#">카카오</a>
                     <ul class="menu_sub">
                         <li><a href="">카카오 문화</a></li>
                         <li><a href="">공동체</a></li>
@@ -288,14 +398,14 @@
                 </li>
                 <li><a href="">뉴스</a></li>
                 <li>
-                    <a href="">기술과 서비스</a>
+                    <a href="#">기술과 서비스</a>
                     <ul class="menu_sub">
                         <li><a href="">기술</a></li>
                         <li><a href="">서비스</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">약속과 책임</a>
+                    <a href="#">약속과 책임</a>
                     <ul class="menu_sub">
                         <li><a href="">ESG</a></li>
                         <li><a href="">소셜임팩트</a></li>
@@ -354,7 +464,7 @@
                         <article class="mid">
                             <div class="text">
                                 <p class="gray report">보도자료</p>
-                                <h2><a href=""></a>카카오 소신상인 프로젝트, 소상공인 디지털 마케팅 지원 나선다</h2>
+                                <h2><a href="">카카오 소신상인 프로젝트, 소상공인 디지털 마케팅 지원 나선다</a></h2>
                                 <p class="hash">#디지털상생 #상생 #소신상인</p>
                             </div>
                             <a href="" class="photo"></a>

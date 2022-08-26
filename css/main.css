@@ -13,6 +13,7 @@ main {
   height: 100%;
   display: flex;
   /*! min-width: 1305px; */
+  max-width: 1305px;
   }
   main section#article1 {
     
@@ -254,7 +255,7 @@ main section#article1 .side2{
   position: absolute;
   font-size: 50px;
   font-weight: 700;
-  letter-spacing: -6px;
+  letter-spacing: -5px;
   left: calc(50% - 405px);
   top: 11%;
   }
@@ -388,7 +389,7 @@ section#article2 .inner .side1 article.small .text ul li a {
   border: #f4f4f4 1px solid;
   border-radius: 10px;
   background-color: #f4f4f4;
-  padding: 0 18px;
+  padding: 0px 16px;
   font-size: 14px;
   font-weight: 500;
   color: #666666;

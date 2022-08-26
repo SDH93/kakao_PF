@@ -6,6 +6,7 @@
     width: 68%;
     padding: 100px 0;
     box-sizing: border-box;
+    max-width: 1305px;
 }
 #title .inner h2.h2{
     position: relative;
@@ -14,6 +15,7 @@
 #title .inner h2{
 font-size: 45px;
 font-weight: 700;
+background-color: #fff;
 }
 #title .inner h2.h2::before{
     content:"";

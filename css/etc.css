@@ -10,7 +10,7 @@ section#etc .inner {
 }
 section#etc .inner .yellow {
   width: 50%;
-  
+  align-items: flex-start;
 }
 section#etc .inner .yellow>a.box {
   width: 100%;
