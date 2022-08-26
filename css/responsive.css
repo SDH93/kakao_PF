@@ -140,10 +140,12 @@
   section#etc .inner .yellow{
     
   width: 100%;
+  max-width: 627px;
   }
   section#etc .inner .blue{
     
   width: 100%;
+  max-width: 627px;
   }
   section#etc .inner a.news{
     transform: scale(0.8);
