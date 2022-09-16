@@ -33,6 +33,14 @@
   footer .inner div.bottom ul.bottom{
     width: 55vw;
   }
+  div.search{
+    min-width: 960px;
+  }
+  div.search form.search::after{
+    width: 150px;
+    height: 150px;
+    right: -160px;
+  }
 
 }
 
@@ -214,7 +222,7 @@ footer .inner .top ul.main li h2 a span{
   margin-bottom: 15px;
   }
   footer .inner .top ul.main li ul.sub li {
-    
+    position: relative;
   }
   footer .inner .top ul.main li ul.sub li a {
     
@@ -222,6 +230,7 @@ footer .inner .top ul.main li h2 a span{
 footer .inner .top ul.main li ul.sub li a:hover{
 }
   footer .inner .top ul.main li ul.sub li a span{
+    top: 5px;
   }
   
   
@@ -247,6 +256,22 @@ footer .inner .top ul.main li ul.sub li a:hover{
   width: 250px;
   }
     
+  div.search{
+    min-width: 627px;
+  }
+  div.search form.search::after{
+    display: none;
+  }
+  div.search form.search input{
+  }
+  
+  div.search ul.search_hash li a {
+    height: 25px;
+    line-height: 25px;
+    padding: 0 15px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width:730px){
@@ -335,10 +360,10 @@ footer .inner .top ul.main li ul.sub li a:hover{
   gap: 20px;
   }
   section#article2 .inner .side1 article.small .text p.yellow{
-       
   transform: translateY(3px);
   max-width: 41.42vw;
   min-width: 230px;
+  margin: 0 auto;
   }
   section#article2 .inner .side1 article.small .text ul li a{
   height: 45px;
@@ -411,12 +436,73 @@ footer .inner .top ul.main li ul.sub li a:hover{
   ul.bottom ul.gray li a{
     
   }
-  footer ul.gray span.link
+  footer ul.gray span.link{
+    
+  }
+
+  div.search{
+    min-width: 250px;
+  }
+  div.search form.search{
+    width: auto;
+  }
+  div.search form.search input{
+    min-width: 250px;
+    padding: 0 30px;
+  }
+  form.search input::placeholder{
+    color: #fff;
+    font-size: 14px;
+
+  }
+  div.search ul.search_hash {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    gap: 10px;
+  }
+  div.search ul.search_hash li a {
+    height: 20px;
+    line-height: 20px;
+    padding: 0 15px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
 
 }
 
 @media screen and (max-width:400px){
   footer .inner div.bottom ul.bottom li a{
+    font-size: 10px;
+  }
+
+
+  div.search form.search input {
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 3;
+    width: 100%;
+    padding: 0 30px;
+    letter-spacing: -1px;
+    border-radius: 25px;
+    margin: 0 auto;
+    min-width: 250px;
+
+
+}
+
+  div.search form.search input{
+  }
+
+  div.search ul.search_hash li a {
+    height: 20px;
+    line-height: 20px;
+    padding: 0 15px;
+    border-radius: 20px;
     font-size: 10px;
   }
 }

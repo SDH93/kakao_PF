@@ -136,8 +136,8 @@ footer .inner .top ul.main li ul.sub li a:hover{
 
   }
   footer .inner div.bottom ul.bottom li a {
-    
   color: #888888;
+  white-space: nowrap;
   }
 footer .inner div.bottom ul.bottom li a:hover {
     color: #333333;  

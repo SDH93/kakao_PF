@@ -8,11 +8,12 @@ header#top {
   z-index: 2;
   background-color: #FFF;
   transition: top 300ms;
+  position: relative;
+  z-index: 10;
   }
 
 
 .header_white{
-  
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -129,6 +130,9 @@ header#top .inner ul.menu li .menu_sub li:hover a{
 body>header#top .inner ul.enb li:hover{
     background-color: #eeeeee;
   }
+body>header#top .inner ul.enb li.X:hover{
+    background-color: transparent;
+}
 
 
   a.test{
