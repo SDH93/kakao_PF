@@ -5,6 +5,7 @@
     $("li.ham").hide();
     $("ul.gray").hide();  
     $("div.dots").hide();
+    $("div.search").hide();
 
     //처음 시작할 때 <1051
     winW=$(window).width();
@@ -101,6 +102,8 @@
             $("li.X a").parent().removeClass("X").addClass("ham");
             $("li.search").show();
 
+            $("div.header_search").show();
+
             if(winW>1051){
 
             $("header#top .inner ul.enb li.ham").hide();
@@ -119,6 +122,8 @@
                                     
             $("#board").remove();
             $("ul.menu li>a>i").remove();
+
+            $("div.header_search").show();
 
             $("#top ul.menu li a").click(function(){                
                 $(this).siblings("ul.menu_sub").toggle();
@@ -139,7 +144,9 @@
             $("footer .inner .top ul.main li h2 a").off("click");
             $("header#top .inner ul.enb li.ham").hide();
             $("body>header#top .inner ul.enb li.lang").show();       
-            $("body>header#top .inner ul.enb li.dark").show();       
+            $("body>header#top .inner ul.enb li.dark").show();     
+            
+            $("div.header_search").show();
             
             if(search == 1){
                 $("div.search").css({opacity:0});
@@ -182,6 +189,7 @@
             $("#board").toggleClass("slideR");
             $("#board .boardinner ul.menu>li:not(:nth-of-type(2))>a").append("<i class='ion-arrow-down-b'></i>");
 
+
             
             $("#board ul.menu li a").click(function(){
                 $("#board").css("position","initial");
@@ -197,6 +205,9 @@
                 $(this).siblings("ul.gray").toggle();
                 return false;
             })
+
+            $("div.header_search").hide();
+
             n=1;
         }
 
@@ -230,7 +241,9 @@
                         $("ul.menu li a").not(this).siblings("ul.menu_sub").hide();
                         return false;
                     })
-                },500);                   
+                },500);      
+                
+                $("div.header_search").show();
             
                 n=0;
             }
@@ -344,7 +357,8 @@
     });
 
     // search
-    $("div.search").clone().insertAfter("#top");
+    $("div.search").clone().insertAfter("#top").addClass("header_search");
+    $("div.header_search").show();
     
     let search = 0
     $("header#top .inner ul.enb li.search a").click(function(){
